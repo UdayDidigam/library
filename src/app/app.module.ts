@@ -11,6 +11,12 @@ import { GenreModule } from './genre/genre.module';
 import { PublisherModule } from './publisher/publisher.module';
 import { RoleModule } from './role/role.module';
 import { AuthService } from './services/auth.service';
+import { AuthorService } from './services/author.service';
+import { BookService } from './services/book.service';
+import { GenreService } from './services/genre.service';
+import { PublisherService } from './services/publisher.service';
+import { RoleService } from './services/role.service';
+import { UserService } from './services/user.service';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserModule } from './user/user.module';
 
@@ -30,7 +36,7 @@ import { UserModule } from './user/user.module';
     PublisherModule,
     AppRoutingModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, BookService, AuthorService, UserService, GenreService, PublisherService, RoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

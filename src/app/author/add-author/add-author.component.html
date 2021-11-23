@@ -1,1 +1,26 @@
-<p>add-author works!</p>
+<h1 class="text-primary">Add Author</h1>
+<form [formGroup]="authorForm" (submit)="saveAuthor()">
+    <div class="row p-3 bg-white">
+        <div class="col-4 mb-3">
+            <label class="form-label">First Name <em class="text-danger">*</em></label>
+            <input class="form-control" type="text" name="firstName" formControlName="firstName"/>
+            <small class="text-danger" *ngIf="authorForm.controls.firstName.touched && authorForm.controls.firstName.errors?.required">First name is required</small>
+        </div>
+        <div class="col-4 mb-3">
+            <label class="form-label">Middle Name</label>
+            <input class="form-control" type="text" name="middleName" formControlName="middleName" />
+        </div>
+        <div class="col-4 mb-3">
+            <label class="form-label">Last Name <em class="text-danger">*</em></label>
+            <input class="form-control" type="text" name="lastName" formControlName="lastName" />
+            <small class="text-danger" *ngIf="authorForm.controls.lastName.touched && authorForm.controls.lastName.errors?.required">Last name is required</small>
+        </div>
+        <div class="col-12 mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" name="description" formControlName="description"></textarea>
+        </div>
+        <div class="col-12 mb-3">
+            <button class="btn btn-outline-secondary float-end" [disabled]="authorForm.invalid"><i class="far fa-save"></i> Save</button>
+        </div>
+    </div>
+</form>

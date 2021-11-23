@@ -1,1 +1,18 @@
-<p>author-list works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Last Name</th>
+        <th scope="col">Middle Name</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let author of authors">
+        <td>{{author.lastName}}</td>
+        <td>{{author.middleName}}</td>
+        <td>{{author.firstName}}</td>
+        <td><button type="button" class="btn btn-outline-primary me-1"><i class="fas fa-pencil-alt"></i></button> <button type="button" class="btn btn-outline-primary"><i class="fa fa-trash"></i></button></td>
+      </tr>
+    </tbody>
+  </table>

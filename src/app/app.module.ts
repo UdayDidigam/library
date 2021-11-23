@@ -19,6 +19,7 @@ import { RoleService } from './services/role.service';
 import { UserService } from './services/user.service';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserModule } from './user/user.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { UserModule } from './user/user.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AuthModule,
     UserModule,
     BookModule,
